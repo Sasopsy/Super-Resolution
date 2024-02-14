@@ -209,7 +209,7 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `21.6850 dB`
 - **SSIM**: `0.7605`
 
-## MSE Loss with Weighted Perceptual Loss (SRCNN)
+## MSE with Weighted Perceptual Loss (SRCNN)
 ### Hyperparameters
 - **Perceptual Model**: `VGG-16`
 - **Feature Extraction Layers**: `(3,8,15,29)`
@@ -251,7 +251,7 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `22.7536 dB`
 - **SSIM**: `0.5199`
 
-## MSE Loss with Weighted Perceptual Loss (SRResNet)
+## MSE with Weighted Perceptual Loss (SRResNet)
 ### Hyperparameters
 - **Perceptual Model**: `VGG-16`
 - **Feature Extraction Layers**: `(3,8,15,29)`
