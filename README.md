@@ -184,6 +184,7 @@ Before delving into the performance of each model, let's look at some of the com
 - **Train, Val, Test Split**: `0.8,0.1,0.1`
 
 # SRCNN 
+
 ## MSE Loss (SRCNN)
 ### Plots
 <img src="results/srcnn-epoch-loss.png"
@@ -194,6 +195,11 @@ Before delving into the performance of each model, let's look at some of the com
 ### Test Metrics
 - **PSNR**: `26.1032 dB`
 - **SSIM**: `0.7731`
+
+### Some Images
+<img src="upscaled_images/SRCNN-MSE_1.png"/>
+<img src="upscaled_images/SRCNN-MSE_12.png"/>
+<img src="upscaled_images/SRCNN-MSE_20.png"/>
 
 ## Perceptual Loss (SRCNN)
 ### Hyperparameters
@@ -208,6 +214,12 @@ Before delving into the performance of each model, let's look at some of the com
 ## Test Metrics
 - **PSNR**: `21.6850 dB`
 - **SSIM**: `0.7605`
+
+### Some Images
+<img src="upscaled_images/SRCNN-Perceptual_1.png"/>
+<img src="upscaled_images/SRCNN-Perceptual_12.png"/>
+<img src="upscaled_images/SRCNN-Perceptual_20.png"/>
+
 
 ## MSE with Weighted Perceptual Loss (SRCNN)
 ### Hyperparameters
@@ -225,6 +237,12 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `26.0233 dB`
 - **SSIM**: `0.7797`
 
+### Some Images
+<img src="upscaled_images/SRCNN-MSE-Perceptual_1.png"/>
+<img src="upscaled_images/SRCNN-MSE-Perceptual_12.png"/>
+<img src="upscaled_images/SRCNN-MSE-Perceptual_20.png"/>
+
+
 # SRResNet
 ## MSE Loss (SRResNet)
 ### Plots
@@ -236,6 +254,11 @@ Before delving into the performance of each model, let's look at some of the com
 ### Test Metrics
 - **PSNR**: `28.2696 dB`
 - **SSIM**: `0.7989`
+
+### Some Images
+<img src="upscaled_images/SRResNet-MSE_1.png"/>
+<img src="upscaled_images/SRResNet-MSE_12.png"/>
+<img src="upscaled_images/SRResNet-MSE_20.png"/>
 
 ## Perceptual Loss (SRResNet)
 ### Hyperparameters
@@ -251,6 +274,12 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `22.7536 dB`
 - **SSIM**: `0.5199`
 
+### Some Images
+<img src="upscaled_images/SRResNet-Perceptual_1.png"/>
+<img src="upscaled_images/SRResNet-Perceptual_12.png"/>
+<img src="upscaled_images/SRResNet-Perceptual_20.png"/>
+
+
 ## MSE with Weighted Perceptual Loss (SRResNet)
 ### Hyperparameters
 - **Perceptual Model**: `VGG-16`
@@ -262,6 +291,11 @@ Before delving into the performance of each model, let's look at some of the com
      alt="Epoch Vs Loss"/>
 <img src="results/srresnet-pm-epoch-psnr.png"
      alt="Epoch Vs PSNR"/>
+
+### Some Images
+<img src="upscaled_images/SRResNet-MSE-Perceptual_1.png"/>
+<img src="upscaled_images/SRResNet-MSE-Perceptual_12.png"/>
+<img src="upscaled_images/SRResNet-MSE-Perceptual_20.png"/>
 
 ## Test Metrics
 - **PSNR**: `28.8381 dB`
