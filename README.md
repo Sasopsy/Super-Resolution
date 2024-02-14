@@ -1,4 +1,27 @@
 # Super Resolution
+
+- [Introduction](#introduction)
+- [Dataset](#dataset)
+- [Model Architectures](#model-architectures)
+   - [SRCNN](#srcnn)
+   - [SRResNet](#srresnet)
+- [Loss Functions](#loss-functions)
+   - [MSE Loss](#mse-loss)
+   - [Perceptual Loss](#perceptual-loss)
+   - [MSE with Weighted Perceptual Loss](#mse-with-weighted-perceptual-loss)
+- [Metrics](#metrics)
+   - [Peak Signal to Noise Ratio (PSNR)](#peak-signal-to-noise-ratio-psnr)
+   - [Structural Similarity Index Measure (SSIM)](#structural-similarity-index-measure-ssim)
+- [Common Hyper-parameters](#common-hyper-parameters)
+- [SRCNN](#srcnn-1)
+   - [MSE Loss (SRCNN)](#mse-loss-srcnn)
+   - [Perceptual Loss (SRCNN)](#perceptual-loss-srcnn)
+   - [MSE with Weighted Perceptual Loss (SRCNN)](#mse-with-weighted-perceptual-loss-srcnn)
+- [SRResNet](#srresnet-1)
+   - [MSE Loss (SRResNet)](#mse-loss-srresnet)
+   - [Perceptual Loss (SRResNet)](#perceptual-loss-srresnet)
+   - [MSE with Weighted Perceptual Loss (SRResNet)](#mse-with-weighted-perceptual-loss-srresnet)
+
 # Introduction
 This a comparative study of different models on the computer vision task of super resolution. Super-resolution is the of upscaling a low resolution image into a high resolution one by a factor of $n$. For this project, I used $n=2$.
 
@@ -148,7 +171,7 @@ $w^{(l)}$ : Width of the features in $l$'th layer.
 
 $c^{(l)}$ : Channels of the features in $l$'th layer.
 
-## MSE Loss with Weighted Perceptual Loss
+## MSE with Weighted Perceptual Loss
 $$\mathcal{L}_{Perceptual-MSE}=\mathcal{L}_{MSE}+\lambda\mathcal{L}_{Perceptual}$$
 where,
 
@@ -162,7 +185,7 @@ where,
 
 $MAX$ : Represents maximum value a pixel can take.
 
-# Structural Similarity Index Measure (SSIM)
+## Structural Similarity Index Measure (SSIM)
 Unlike traditional metrics, SSIM is designed to provide a more perceptually relevant measure by taking into account changes in structural information, luminance, and contrast.
 $$SSIM(\mathbf{x},\mathbf{y})=
 \frac{(2\mu_{\mathbf{x}}\mu_\mathbf{y}+C_1)(2\sigma_{\mathbf{x}\mathbf{y}}+C_2)}
@@ -211,7 +234,7 @@ Before delving into the performance of each model, let's look at some of the com
 <img src="results/srcnn-p-epoch-psnr.png"
      alt="Epoch Vs PSNR"/>
 
-## Test Metrics
+### Test Metrics
 - **PSNR**: `21.6850 dB`
 - **SSIM**: `0.7605`
 
@@ -233,7 +256,7 @@ Before delving into the performance of each model, let's look at some of the com
 <img src="results/srcnn-pm-epoch-psnr.png"
      alt="Epoch Vs PSNR"/>
 
-## Test Metrics
+### Test Metrics
 - **PSNR**: `26.0233 dB`
 - **SSIM**: `0.7797`
 
@@ -270,7 +293,7 @@ Before delving into the performance of each model, let's look at some of the com
 <img src="results/srresnet-p-epoch-psnr.png"
      alt="Epoch Vs PSNR"/>
 
-## Test Metrics
+### Test Metrics
 - **PSNR**: `22.7536 dB`
 - **SSIM**: `0.5199`
 
@@ -297,7 +320,7 @@ Before delving into the performance of each model, let's look at some of the com
 <img src="upscaled_images/SRResNet-MSE-Perceptual_12.png"/>
 <img src="upscaled_images/SRResNet-MSE-Perceptual_20.png"/>
 
-## Test Metrics
+### Test Metrics
 - **PSNR**: `28.8381 dB`
 - **SSIM**: `0.8170`
 
