@@ -158,6 +158,7 @@ $c$ : Channels in the image.
 
 ## Perceptual Loss
 Feature wise mean-squared loss extracted from different layers of a pretrained classification model.
+
 $$\mathcal{L}_{Perceptual}=\sum_{l}\frac{1}{h^{(l)}\times\ w^{(l)}\times c^{(l)}}||\mathbf{f}_r^{(l)}-\mathbf{f}_u^{(l)}||^2_2$$
 where,
 
@@ -172,6 +173,7 @@ $w^{(l)}$ : Width of the features in $l$'th layer.
 $c^{(l)}$ : Channels of the features in $l$'th layer.
 
 ## MSE with Weighted Perceptual Loss
+
 $$\mathcal{L}_{Perceptual-MSE}=\mathcal{L}_{MSE}+\lambda\mathcal{L}_{Perceptual}$$
 where,
 
