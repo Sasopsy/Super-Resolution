@@ -299,6 +299,7 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `22.7536 dB`
 - **SSIM**: `0.5199`
 
+**Note**
 ### Some Images
 <img src="upscaled_images/SRResNet-Perceptual_1.png"/>
 <img src="upscaled_images/SRResNet-Perceptual_12.png"/>
@@ -326,5 +327,12 @@ Before delving into the performance of each model, let's look at some of the com
 - **PSNR**: `28.8381 dB`
 - **SSIM**: `0.8170`
 
+# Qualitative Inference
+## SRCNN
+Even though PSNR of our mathematical interpolations (even SSIM) are higher than the ones produced by our models, the perceptual quality from our models are better in most cases.
 
+And example would be the following image:
+<img src="upscaled_images/SRCNN-MSE_12.png"/>
+Although the model interpolated more and better details in our upscaled image (better than bicubic), its PSNR and SSIM and lower than all the other interpolations performed on it.
 
+Sa
